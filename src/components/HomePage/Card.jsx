@@ -12,9 +12,9 @@ const Card = ({ imageUrl, link, name, description, swiper }) => {
     <div
       className={`${
         swiper === true ? "min-w-full" : "w-full"
-      } md:w-1/4 sm:1/3  px-4 mb-8`}
+      } lg:w-1/3 sm:w-1/2 justify-center   px-4 mb-8`}
     >
-      <div className="bg-white  border  rounded-lg overflow-hidden shadow-lg">
+      <div className="bg-white   rounded-lg overflow-hidden shadow-lg">
         <img
           src={imageUrl}
           alt={name}

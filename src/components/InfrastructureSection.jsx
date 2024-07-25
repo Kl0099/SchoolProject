@@ -29,30 +29,6 @@ const InfrastructureSection = ({
           </div>
         </div>
       </div>
-      {/* {campus === true && (
-        <>
-          <CampusSection
-            title="State-of-the-art Science and Computer Labs"
-            description="Our science and computer labs are equipped with the latest technology and instruments to provide students with hands-on learning experiences."
-            imgUrl={imgUrl}
-          />
-          <CampusSection
-            title="Spacious and Well-equipped Classrooms"
-            description="Our classrooms are designed to provide a conducive learning environment, equipped with modern amenities and ample space for students."
-            imgUrl={imgUrl}
-          />
-          <CampusSection
-            title="Library with a Vast Collection of Books and Digital Resources"
-            description="The library offers a wide range of books and digital resources to support the academic needs and interests of students."
-            imgUrl={imgUrl}
-          />
-          <CampusSection
-            title="Sports Facilities Including a Playground, Gymnasium, and Swimming Pool"
-            description="Our sports facilities include a playground, gymnasium, and swimming pool, providing students with ample opportunities for physical activities and sports."
-            imgUrl={imgUrl}
-          />
-        </>
-      )} */}
     </>
   );
 };

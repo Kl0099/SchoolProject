@@ -16,9 +16,8 @@ import ContactUs from "./Contactus";
 const Footer = () => {
   const [modal, setModal] = useState(null);
   const contactInfo = [
-    { icon: FaPhone, text: "01744-252397" },
-    { icon: FaEnvelope, text: "springdalepublicschool@gmail.com" },
-    { icon: FaEnvelope, text: "naresh723sharma@gmail.com" },
+    { icon: FaPhone, text: "+1 (123) 456-7890" },
+    { icon: FaEnvelope, text: "info@springdale.edu" },
     { icon: FaGlobe, text: "spskidz.com" },
   ];
 
@@ -52,7 +51,10 @@ const Footer = () => {
             className="h-20 mb-4"
           />
           <h3 className="text-lg font-semibold">SPRINGDALE PUBLIC SCHOOL</h3>
-          <p>Near Aman hospital, ISMAILABAD DISTT. KURUKSHETRA- 136129</p>
+          <p className="  w-full text-center md:w-[60%] ">
+            Springdale Public School, 123 Education Lane, Cityville, State, ZIP
+            Code
+          </p>
           {contactInfo.map((info, index) => (
             <div
               key={index}
@@ -103,8 +105,9 @@ const Footer = () => {
 
         <div className="mb-6">
           <iframe
+            loading="lazy"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.9080488076463!2d-46.63420758548641!3d-23.55260338468598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c5ecb94fd7%3A0x0!2zMjPCsDMzJzA5LjkiUyA0NsKwMzgnMTEuNSJX!5e0!3m2!1sen!2sbr!4v1594551540984!5m2!1sen!2sbr"
-            width="300"
+            width="250"
             height="200"
             frameBorder="0"
             style={{ border: 0 }}

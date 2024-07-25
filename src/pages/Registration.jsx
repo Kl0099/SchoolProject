@@ -85,7 +85,14 @@ const RegisterForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md"
     >
-      <h2 className="text-2xl font-semibold mb-6">Register</h2>
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-semibold">Register</h2>
+        <img
+          src="/logo.png"
+          alt="School Logo"
+          className="w-16 h-16"
+        />
+      </div>
 
       <div className="mb-4">
         <label className="block text-gray-700">Student Name</label>
@@ -99,7 +106,7 @@ const RegisterForm = () => {
           </p>
         )}
       </div>
-      {/* mobile */}
+
       <div className="mb-4">
         <label className="block text-gray-700">Mobile Number</label>
         <input
@@ -112,7 +119,7 @@ const RegisterForm = () => {
           </p>
         )}
       </div>
-      {/* {Email} */}
+
       <div className="mb-4">
         <label className="block text-gray-700">Email</label>
         <input
@@ -123,8 +130,8 @@ const RegisterForm = () => {
           <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
         )}
       </div>
-      <div className=" flex gap-2">
-        {/* class */}
+
+      <div className="flex gap-2">
         <div className="mb-4 w-1/2">
           <label className="block text-gray-700">Class</label>
           <select
@@ -159,7 +166,7 @@ const RegisterForm = () => {
             </p>
           )}
         </div>
-        {/* city */}
+
         <div className="mb-4 w-1/2">
           <label className="block text-gray-700">City</label>
           <input
@@ -171,9 +178,8 @@ const RegisterForm = () => {
           )}
         </div>
       </div>
-      {/* pincode */}
-      <div className=" md:flex gap-2">
-        {/* pincode  */}
+
+      <div className="md:flex gap-2">
         <div className="mb-4 md:w-1/2">
           <label className="block text-gray-700">Pincode</label>
           <input
@@ -187,7 +193,7 @@ const RegisterForm = () => {
           )}
         </div>
 
-        <div className="mb-4 :w-1/2">
+        <div className="mb-4 md:w-1/2">
           <label className="block text-gray-700">Last Class Percentage</label>
           <input
             type="number"
@@ -201,6 +207,7 @@ const RegisterForm = () => {
           )}
         </div>
       </div>
+
       <div className="mb-4">
         <label className="block text-gray-700">Address</label>
         <textarea
@@ -217,7 +224,7 @@ const RegisterForm = () => {
         type="submit"
         className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
       >
-        {loading === true ? "please wait a minute" : "Register"}
+        {loading ? "Please wait a moment..." : "Register"}
       </button>
     </form>
   );

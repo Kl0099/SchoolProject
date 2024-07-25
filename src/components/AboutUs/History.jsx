@@ -2,13 +2,13 @@ import React from "react";
 
 const History = () => {
   return (
-    <div className="p-8 rounded-lg mx-4 md:mx-16">
+    <div className="md:p-8 p-2 text-sm lg:text-lg  rounded-lg mx-4 md:mx-16">
       <div className="text-left">
         <div className="text-xl font-bold text-gray-900">
           Founded in 1985, Springdale Public School has been dedicated to
           providing quality education and holistic development to students.
         </div>
-        <p className=" mt-4">
+        <p className=" text-sm lg:text-lg mt-4">
           Springdale Public School is a modern and progressive institution;
           right from its inception in 1990 it’s a vision translated into reality
           with a mission to create leaders, winners and achievers in a global

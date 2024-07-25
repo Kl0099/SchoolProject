@@ -5,8 +5,8 @@ const PromotionBanner = ({ text, text1, text2, isAbsolute = false }) => {
   return (
     <div
       className={`overflow-hidden ${
-        isAbsolute === true ? "absolute top-[80px]" : ""
-      } w-full bg-gray-200  text-black`}
+        isAbsolute === true ? "absolute top-[0px]" : ""
+      } w-full  text-slate-200`}
     >
       <div className="animate-marquee whitespace-nowrap">
         <span className="inline-block text-2xl p-2 mr-16">{text}</span>

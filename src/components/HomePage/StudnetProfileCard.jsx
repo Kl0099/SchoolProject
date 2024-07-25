@@ -27,11 +27,11 @@ const profiles = [
 
 const StudentProfileCard = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container flex justify-center flex-col items-center mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-center mb-8">
         Student Achievements
       </h2>
-      <div className="flex flex-wrap md:justify-center -mx-4">
+      <div className="flex   lg:w-[80%]  flex-wrap md:justify-center -mx-4">
         {profiles.map((profile, index) => (
           <Card
             name={profile.name}

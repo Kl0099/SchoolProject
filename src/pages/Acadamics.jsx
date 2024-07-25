@@ -3,7 +3,7 @@ import Acadamicss from "../components/Acadamics";
 
 const Academics = ({ title, component }) => {
   return (
-    <div className="bg-gray-400">
+    <div className="bg-gray-400 sm:text-lg text-sm">
       <div className="shadow-lg opacity-90 w-full h-[250px] overflow-hidden relative">
         <img
           src="/Aboutuspage.png"

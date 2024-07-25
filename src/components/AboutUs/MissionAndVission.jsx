@@ -2,11 +2,11 @@ import React from "react";
 
 const Missionandvission = () => {
   return (
-    <div className="bg-white p-8  border rounded-lg mx-4 md:mx-16 mt-8 shadow-lg">
+    <div className="bg-white md:p-8  border rounded-lg mx-4 md:mx-16 mt-8 shadow-lg">
       <div className="bg-gray-400 p-4 text-white text-lg font-bold text-center rounded-t-lg">
         Vision and Mission
       </div>
-      <div className="p-8 text-left">
+      <div className="md:p-8 p-2 text-left">
         <h2 className="text-lg font-semibold mb-8">
           Here Are Some Of The Lines For About Vision and Mission.
         </h2>

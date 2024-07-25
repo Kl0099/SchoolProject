@@ -18,7 +18,7 @@ const PrincipleMessage = () => {
           />
         </div>
         <div className="md:w-2/3 md:pl-5  flex flex-col ">
-          <div className=" mb-1">
+          <div className=" text-sm mb-1">
             <p className="text-gray-700 leading-relaxed">
               Thus the role and responsibility of the school in the present day
               is to shape a child’s thought process and path to learning .
