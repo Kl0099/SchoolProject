@@ -112,7 +112,7 @@ const NavBar = () => {
           </li>
           <li>
             <Link
-              to="#"
+              to="/galary"
               className="hover:text-gray-300"
             >
               Gallery

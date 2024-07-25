@@ -13,6 +13,7 @@ import Acadamicss from "./components/Acadamics";
 import Addmission from "./components/Addmission";
 import RegisterForm from "./pages/Registration";
 import Footer from "./components/Footer";
+import Gallery from "./pages/Galary";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -86,6 +87,10 @@ function App() {
           path="/registration"
           element={<RegisterForm />}
         ></Route>
+        <Route
+          path={"/galary"}
+          element={<Gallery />}
+        />
       </Routes>
       {/* <SwipersImages /> */}
       <Footer />
