@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ConfirmationModal from "./Modal";
+import RegisterForm from "../pages/Registration";
 
 const AboutUsLinks = [
   { name: "Mission & Vision", link: "/about/mission-vision" },
@@ -18,6 +20,7 @@ const Infrastructure = [
 ];
 
 const NavBar = () => {
+  const [modal, setModal] = useState(null);
   // const [isOpen, setIsOpen] = React.useState(false);
   // const toggleDrawer = () => {
   //   console.log("ds");
@@ -41,7 +44,7 @@ const NavBar = () => {
         <div className="flex items-center">
           <Link to={"/"}>
             <img
-              src="/public/logo.png" // Update this with the actual path to your logo image
+              src="/logo.png" // Update this with the actual path to your logo image
               alt="Logo"
               className="w-12 h-12 mr-4"
             />
@@ -128,24 +131,23 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link
+            <button
+              onClick={() => setModal("data")}
               to="#"
               className="hover:text-gray-300 bg-yellow-500 text-black py-2 px-4 rounded"
             >
               Apply Now
-            </Link>
-          </li>
-          <li>
-            <Link
-              // onClick={() => toggleDrawer()}
-              to="#"
-              className="hover:text-gray-300 bg-green-500 text-black py-2 px-4 rounded"
-            >
-              click me
-            </Link>
+            </button>
           </li>
         </ul>
       </div>
+      {modal && (
+        <ConfirmationModal
+          setModal={setModal}
+          modal={modal}
+          children={<RegisterForm />}
+        ></ConfirmationModal>
+      )}
     </nav>
   );
 };

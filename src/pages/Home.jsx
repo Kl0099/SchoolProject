@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import SwipersImages from "../components/SwipersImages";
 import AboutInHome from "../components/AboutInHome";
 import StudentLife from "../components/HomePage/StudentLife";
 import StudentProfileCard from "../components/HomePage/StudnetProfileCard";
 import Facilities from "../components/HomePage/Facilities";
+import Facalty from "../components/Facalty";
+import ConfirmationModal from "../components/Modal";
+import { Link } from "react-router-dom";
+import RegisterForm from "./Registration";
+import PromotionBanner from "../components/PromotionBanner";
 const Home = () => {
+  const [modal, setModal] = useState(null);
   return (
     <div className="relative w-full h-full mx-auto overflow-hidden">
       <div className="h-[80vh] overflow-hidden relative">
@@ -33,7 +39,16 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="mt-20">
+      <PromotionBanner
+        text={"Welcome to Springdale Public School "}
+        text1={"Admission Form Availability: March 1st"}
+        text2={
+          "Last Date for Submission: March 31st &&  Announcement of Results: April 30th"
+        }
+        isAbsolute={true}
+      />
+
+      <div className="mt-2">
         {/* About SPS section */}
         <AboutInHome />
       </div>
@@ -47,8 +62,19 @@ const Home = () => {
       </div>
       <div className="mt-20">
         {/* About SPS section */}
+        <Facalty />
+      </div>
+      <div className="mt-20">
+        {/* About SPS section */}
         <Facilities />
       </div>
+      {modal && (
+        <ConfirmationModal
+          setModal={setModal}
+          modal={modal}
+          children={<RegisterForm />}
+        ></ConfirmationModal>
+      )}
     </div>
   );
 };

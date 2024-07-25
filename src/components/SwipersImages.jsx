@@ -26,7 +26,7 @@ export default () => {
       <SwiperSlide>
         <div className=" w-screen h-screen">
           <img
-            src="/public/images.jpg"
+            src="/images.jpg"
             alt="images"
             width={"100%"}
             height={"100%"}
@@ -36,7 +36,7 @@ export default () => {
       <SwiperSlide>
         <div className=" w-screen h-screen">
           <img
-            src="/public/sportsday.webp"
+            src="/sportsday.webp"
             alt="images"
             width={"100%"}
             height={"100%"}
@@ -46,7 +46,7 @@ export default () => {
       <SwiperSlide>
         <div className=" w-screen h-screen">
           <img
-            src="/public/images.jpg"
+            src="/images.jpg"
             alt="images"
             width={"100%"}
             height={"100%"}

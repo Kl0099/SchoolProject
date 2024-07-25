@@ -11,6 +11,8 @@ import Infrastructure from "./pages/Infrastructure";
 import Academics from "./pages/Acadamics";
 import Acadamicss from "./components/Acadamics";
 import Addmission from "./components/Addmission";
+import RegisterForm from "./pages/Registration";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -80,8 +82,13 @@ function App() {
             />
           }
         />
+        <Route
+          path="/registration"
+          element={<RegisterForm />}
+        ></Route>
       </Routes>
       {/* <SwipersImages /> */}
+      <Footer />
     </div>
   );
 }

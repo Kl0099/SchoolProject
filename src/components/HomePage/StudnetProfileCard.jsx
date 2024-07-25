@@ -31,7 +31,7 @@ const StudentProfileCard = () => {
       <h2 className="text-3xl font-bold text-center mb-8">
         Student Achievements
       </h2>
-      <div className="flex flex-wrap -mx-4">
+      <div className="flex flex-wrap md:justify-center -mx-4">
         {profiles.map((profile, index) => (
           <Card
             name={profile.name}
