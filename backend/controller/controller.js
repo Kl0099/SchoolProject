@@ -8,7 +8,7 @@ const registerUser = async (req, res) => {
       name,
       email,
       number,
-      class: userClass,
+      userClass,
       city,
       pincode,
       lastClassPercentage,

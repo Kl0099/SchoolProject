@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const schema = z.object({
   name: z.string().nonempty("Name is required"),
@@ -10,6 +12,7 @@ const schema = z.object({
 });
 
 const ContactUs = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -18,15 +21,40 @@ const ContactUs = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    console.log(import.meta.env.VITE_BACKEND_URL);
+    setLoading(true);
+    const taostId = toast.loading("please wait a minute...");
+    try {
+      const res = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/inquiry`,
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }
+      );
+      // const res = await axios.get(
+      //   `${import.meta.env.VITE_BACKEND_URL}/api/get`
+      // );
+      console.log(res.data);
+      if (res.data.success) {
+        toast.success("message sent successfully");
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+      toast.dismiss(taostId);
+    }
+    // console.log(data);
     // Handle form submission, e.g., send data to backend
   };
 
   return (
     <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold mb-6">Contact Us</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form>
         <div className="mb-4">
           <label className="block text-gray-700">Name</label>
           <input
@@ -64,10 +92,11 @@ const ContactUs = () => {
         </div>
 
         <button
-          type="submit"
+          onClick={handleSubmit(onSubmit)}
+          type="button"
           className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
         >
-          Send
+          {loading === true ? "please wait a minute" : "Send"}
         </button>
       </form>
     </div>

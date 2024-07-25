@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -10,8 +10,11 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ConfirmationModal from "./Modal";
+import ContactUs from "./Contactus";
 
 const Footer = () => {
+  const [modal, setModal] = useState(null);
   const contactInfo = [
     { icon: FaPhone, text: "01744-252397" },
     { icon: FaEnvelope, text: "springdalepublicschool@gmail.com" },
@@ -35,6 +38,9 @@ const Footer = () => {
     FaYoutube,
     FaWhatsapp,
   ];
+  const openContacUsForm = () => {
+    setModal("data");
+  };
 
   return (
     <div className=" bg-gray-100 text-slate-700 mt-1 py-10 px-2">
@@ -78,7 +84,19 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Explore</h3>
           <ul className="space-y-2">
             {exploreLinks.map((link, index) => (
-              <li key={index}>{link}</li>
+              <li
+                onClick={
+                  link === "Contact Us"
+                    ? openContacUsForm
+                    : (e) => e.preventDefault()
+                }
+                className={`${
+                  link === "Contact Us" ? "cursor-pointer" : "cursor-pointer"
+                }`}
+                key={index}
+              >
+                {link}
+              </li>
             ))}
           </ul>
         </div>
@@ -96,6 +114,13 @@ const Footer = () => {
           ></iframe>
         </div>
       </div>
+      {modal && (
+        <ConfirmationModal
+          setModal={setModal}
+          modal={modal}
+          children={<ContactUs />}
+        ></ConfirmationModal>
+      )}
     </div>
   );
 };

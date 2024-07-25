@@ -6,14 +6,14 @@ const profiles = [
     name: "John Smith",
     description:
       "John Smith's dedication and passion for mathematics have earned him the prestigious title of National Level Math Olympiad Winner. Competing against the brightest minds from across the country, John demonstrated exceptional problem-solving skills, logical reasoning, and analytical thinking. His achievement is a testament to his hard work, perseverance, and the quality education provided by our school.",
-    imageUrl: "/studentImage.jpg",
+    imageUrl: "/randomstudent2.jpg",
     link: "#",
   },
   {
     name: "Sarah Lee",
     description:
       "Sarah Lee's remarkable talent and unwavering commitment to swimming have led her to win the Gold Medal at the State Swimming Championship. Her rigorous training regimen, combined with her determination and focus, has propelled her to the top of the competition. Sarah's achievement highlights her exceptional athletic abilities and the strong support system provided by our school's sports program.",
-    imageUrl: "/studentImage.jpg",
+    imageUrl: "/randomstudent3.jpg",
     link: "#",
   },
   {

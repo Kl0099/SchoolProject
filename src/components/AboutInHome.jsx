@@ -1,5 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaShieldAlt,
+  FaLightbulb,
+  FaBook,
+  FaFlask,
+  FaDesktop,
+  FaUniversity,
+} from "react-icons/fa";
+import { MdComputer } from "react-icons/md";
 
 const AboutInHome = () => {
   return (
@@ -18,7 +27,7 @@ const AboutInHome = () => {
             className="w-full rounded-lg shadow-md"
           />
         </div>
-        <div className="md:w-1/2 p-4 flex flex-col ">
+        <div className="md:w-1/2 p-4 flex flex-col">
           <div>
             <p className="text-gray-700 leading-relaxed">
               Springdale Public School is a modern and progressive institution;
@@ -37,28 +46,28 @@ const AboutInHome = () => {
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-            <div className="flex items-center">
-              <i className="fas fa-shield-alt text-green-600 text-2xl mr-2"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <FaShieldAlt className="text-green-600 text-2xl mr-2" />
               <span className="text-gray-700">Security</span>
             </div>
-            <div className="flex items-center">
-              <i className="fas fa-lightbulb text-green-600 text-2xl mr-2"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <FaLightbulb className="text-green-600 text-2xl mr-2" />
               <span className="text-gray-700">Skill Boosters</span>
             </div>
-            <div className="flex items-center">
-              <i className="fas fa-book text-green-600 text-2xl mr-2"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <FaBook className="text-green-600 text-2xl mr-2" />
               <span className="text-gray-700">Library</span>
             </div>
-            <div className="flex items-center">
-              <i className="fas fa-flask text-green-600 text-2xl mr-2"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <FaFlask className="text-green-600 text-2xl mr-2" />
               <span className="text-gray-700">Labs</span>
             </div>
-            <div className="flex items-center">
-              <i className="fas fa-desktop text-green-600 text-2xl mr-2"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <MdComputer className="text-green-600 text-2xl mr-2" />
               <span className="text-gray-700">Computer Lab</span>
             </div>
-            <div className="flex items-center">
-              <i className="fas fa-university text-green-600 text-2xl mr-2"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <FaUniversity className="text-green-600 text-2xl mr-2" />
               <span className="text-gray-700">Campus</span>
             </div>
           </div>

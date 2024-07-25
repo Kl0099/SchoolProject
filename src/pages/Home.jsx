@@ -22,20 +22,20 @@ const Home = () => {
           className="md:absolute inset-0 w-full h-full object-cover z-0"
         />
       </div>
-      <div className="z-20 md:mx-16 relative h-[25vh] mt-8">
-        <div className="w-full md:w-[75%] h-full md:absolute ml-3 overflow-clip shadow-lg p-3  bg-gray-100 text-white  md:-top-[100px]">
-          <span className="text-2xl mx-auto w-full text-left  md:top-[20px] font-medium md:absolute text-black">
+      <div className=" lg:z-20 overflow-clip relative shadow-lg bg-white lg:bottom-[100px] min-h-[25vh] md:mx-16  mt-8">
+        <div className="w-full  h-full lg:absolute text-left  lg:text-center  ml-3  p-3   text-white">
+          <span className=" text-lg lg:text-2xl w-full mb-2  font-medium  text-black">
             Welcome to Springdale Public School, where we nurture young minds
             for a brighter future.
           </span>
-          <p className="mx-auto md:block hidden w-[90%] text-left ml-3 mr-3 md:bottom-[20px] md:absolute font-medium text-black">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nisi
-            culpa sit hic animi, perferendis mollitia pariatur porro deserunt
-            tempora asperiores cum doloremque beatae amet rerum quo explicabo
-            praesentium provident? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Labore nisi culpa sit hic animi, perferendis
-            mollitia pariatur porro deserunt tempora asperiores cum doloremque
-            beatae amet rerum quo explicabo praesentium provident?
+          <p className=" text-sm md:text-lg w-[90%] text-left mt-4 font-medium text-black">
+            Springdale Public School, established in 1990, is dedicated to
+            fostering an environment of academic excellence and holistic
+            development. Our mission is to cultivate leaders, achievers, and
+            compassionate individuals who can thrive in a global society. We
+            offer a comprehensive education that combines rigorous academics,
+            cutting-edge technology, and a wide range of extracurricular
+            activities.
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const Home = () => {
         isAbsolute={true}
       />
 
-      <div className="mt-2">
+      <div className="mt-10">
         {/* About SPS section */}
         <AboutInHome />
       </div>

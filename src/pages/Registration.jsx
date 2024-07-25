@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const schema = z.object({
   studentName: z.string().nonempty("Student Name is required"),
@@ -33,6 +35,7 @@ const schema = z.object({
 });
 
 const RegisterForm = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -40,9 +43,41 @@ const RegisterForm = () => {
   } = useForm({
     resolver: zodResolver(schema),
   });
-
-  const onSubmit = (data) => {
-    console.log(data);
+  /*        */
+  const onSubmit = async (data) => {
+    console.log(import.meta.env.VITE_BACKEND_URL);
+    setLoading(true);
+    const taostId = toast.loading("please wait a minute...");
+    try {
+      const res = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/registration`,
+        {
+          name: data.studentName,
+          email: data.email,
+          number: data.mobileNumber,
+          userClass: data.classField,
+          city: data.city,
+          pincode: data.pincode,
+          lastClassPercentage: data.lastClassPercentage,
+          address: data.address,
+        }
+      );
+      // const res = await axios.get(
+      //   `${import.meta.env.VITE_BACKEND_URL}/api/get`
+      // );
+      console.log(data);
+      if (res.data.success) {
+        toast.success("User successfully registered");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Network error");
+    } finally {
+      setLoading(false);
+      toast.dismiss(taostId);
+    }
+    // console.log(data);
+    // Handle form submission, e.g., send data to backend
   };
 
   return (
@@ -178,10 +213,11 @@ const RegisterForm = () => {
       </div>
 
       <button
+        disabled={loading}
         type="submit"
         className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
       >
-        Register
+        {loading === true ? "please wait a minute" : "Register"}
       </button>
     </form>
   );
